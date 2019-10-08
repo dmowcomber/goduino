@@ -17,7 +17,7 @@ Goduino uses [Firmata](https://github.com/firmata/protocol) protocol for [Arduin
 ## Installation
 
 ```bash
-	go get github.com/argandas/goduino
+	go get github.com/dmowcomber/goduino
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/argandas/goduino"
+	"github.com/dmowcomber/goduino"
 	"time"
 )
 
@@ -39,7 +39,7 @@ func main() {
 		return
 	}
 	defer arduino.Disconnect()
-	
+
 	arduino.PinMode(13, goduino.Output)
 	for {
 		arduino.DigitalWrite(13, 1)
